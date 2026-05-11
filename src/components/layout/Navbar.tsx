@@ -86,7 +86,7 @@ export function Navbar() {
               className="lg:hidden flex items-center justify-center w-14 h-14 text-white hover:text-regirl-burgundy transition-all active:scale-90"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {mobileMenuOpen ? <X size={44} weight="bold" /> : <List size={44} weight="bold" />}
+              {mobileMenuOpen ? <X size={44} weight="light" /> : <List size={44} weight="light" />}
             </button>
           </div>
         </div>
