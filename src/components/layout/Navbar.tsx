@@ -118,16 +118,22 @@ export function Navbar() {
                 </button>
               </div>
 
-              <div className="flex flex-col gap-8">
-                {navLinks.map((link) => (
-                  <Link
+              <div className="flex flex-col gap-12">
+                {navLinks.map((link, idx) => (
+                  <motion.div
                     key={link.name}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="font-serif text-4xl text-white hover:text-regirl-burgundy transition-colors"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 + idx * 0.1 }}
                   >
-                    {link.name}
-                  </Link>
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="font-serif text-5xl text-white hover:text-regirl-burgundy transition-colors block border-b border-white/5 pb-6"
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
 
