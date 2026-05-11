@@ -12,21 +12,16 @@ interface HeroSectionProps {
 export function HeroSection({ imageUrl }: HeroSectionProps) {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-white">
-      {/* Background Image with Zoom effect */}
-      <motion.div 
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 2.5, ease: "easeOut" }}
-        className="absolute inset-0"
-      >
+      {/* Background Image with optimized CSS Zoom effect */}
+      <div className="absolute inset-0 overflow-hidden">
         <Image
           src={imageUrl}
           alt="IRUN Hero"
           fill
-          className="object-cover object-center brightness-[0.85]"
+          className="object-cover object-center brightness-[0.85] animate-slow-zoom will-change-transform"
           priority
         />
-      </motion.div>
+      </div>
       
       {/* Overlay - subtle gradient for text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-regirl-charcoal/60 via-transparent to-transparent" />

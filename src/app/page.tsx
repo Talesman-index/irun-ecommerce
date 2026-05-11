@@ -124,7 +124,7 @@ export default function Home() {
             </div>
           </Reveal>
           
-          <div className="flex gap-6 md:gap-8 animate-marquee whitespace-nowrap">
+          <div className="flex gap-6 md:gap-8 animate-marquee whitespace-nowrap will-change-transform">
             {[
               '/assets/images/IMG_6210.JPG',
               '/assets/images/IMG_6212.JPG',

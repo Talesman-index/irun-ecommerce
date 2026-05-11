@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   title: "irun | Luxe & Authenticité",
   description: "Des mèches premium pour sublimer votre beauté naturelle. L'excellence du tissage inspirée par l'héritage.",
   icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/icon.png",
+    apple: "/icon.png",
   }
 };
 
