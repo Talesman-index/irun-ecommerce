@@ -1,26 +1,164 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colors - Regirl Inspired */
+  --color-regirl-burgundy: #8E2210;
+  --color-regirl-burgundy-deep: #902414;
+  --color-regirl-charcoal: #393640;
+  --color-regirl-charcoal-muted: #66635E;
+  --color-regirl-cream: #FFF3DE;
+  --color-regirl-cream-pale: #FEF7E0;
+  --color-regirl-off-black: #000000;
+  --color-regirl-off-white: #FDFDFC;
+  --color-regirl-ivory: #FFFCF3;
+  --color-regirl-teal: #243E3A;
+  
+  --color-regirl-border: #E5E7EB;
+  --color-regirl-error: #FF0000;
+  --color-regirl-success: #FF9AA1;
+
+  /* Fonts */
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-ui: var(--font-jost), sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
+  --font-accent: var(--font-cormorant), serif;
+
+  /* Spacing Scale - Regirl */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-52: 52px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+
+  /* Elevation */
+  --shadow-regirl-1: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
+  --shadow-regirl-2: 0px 1px 4px 0px rgba(0, 0, 0, 0.12);
+  --shadow-regirl-3: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: white;
+    color: #393640;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Buttons */
+  .btn-regirl-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 2.5rem;
+    background-color: #8E2210;
+    color: white;
+    font-family: var(--font-jost), sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    cursor: pointer;
+  }
+  .btn-regirl-primary:hover {
+    background-color: #902414;
+  }
+  
+  .btn-regirl-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #393640;
+    font-family: var(--font-jost), sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+  .btn-regirl-ghost:hover {
+    opacity: 0.8;
+  }
+
+  .btn-regirl-outline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 2.5rem;
+    border: 1px solid #8E2210;
+    color: #8E2210;
+    font-family: var(--font-jost), sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    cursor: pointer;
+  }
+  .btn-regirl-outline:hover {
+    background-color: #8E2210;
+    color: white;
+  }
+
+  .input-regirl-pill {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #E5E7EB;
+    color: #393640;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 14px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    height: 52px;
+    border-radius: 50px;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+  .input-regirl-pill:focus {
+    border-color: #8E2210;
+    box-shadow: 0 0 0 4px rgba(142, 34, 16, 0.05);
+  }
+}
+
+/* Typography Utilities */
+.serif { font-family: var(--font-serif); }
+.sans { font-family: var(--font-sans); }
+.ui { font-family: var(--font-ui); }
+.accent { font-family: var(--font-accent); font-style: italic; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
