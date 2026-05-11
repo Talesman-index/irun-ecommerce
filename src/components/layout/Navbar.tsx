@@ -73,9 +73,9 @@ export function Navbar() {
             </button>
             <button 
               onClick={() => setIsCartOpen(true)}
-              className="text-white/70 hover:text-white transition-colors relative"
+              className="text-white/70 hover:text-white transition-colors relative p-2"
             >
-              <ShoppingBag size={32} weight="light" />
+              <ShoppingBag size={38} weight="light" className="md:w-[32px]" />
               {cartCount > 0 && (
                 <span className="absolute -top-2 -right-2 w-5 h-5 bg-regirl-burgundy rounded-full flex items-center justify-center text-white font-ui text-[10px] font-bold shadow-lg">
                   {cartCount}
@@ -83,10 +83,10 @@ export function Navbar() {
               )}
             </button>
             <button 
-              className="lg:hidden flex items-center justify-center w-12 h-12 text-white hover:text-regirl-burgundy transition-all active:scale-95"
+              className="lg:hidden flex items-center justify-center w-14 h-14 text-white hover:text-regirl-burgundy transition-all active:scale-90"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {mobileMenuOpen ? <X size={36} weight="bold" /> : <List size={36} weight="bold" />}
+              {mobileMenuOpen ? <X size={44} weight="bold" /> : <List size={44} weight="bold" />}
             </button>
           </div>
         </div>
