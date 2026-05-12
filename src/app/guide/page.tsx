@@ -57,6 +57,17 @@ export default function GuidePage() {
         <div className="absolute top-0 right-0 w-1/3 h-full bg-regirl-burgundy/10 blur-[120px] rounded-full -mr-20 -mt-20" />
         
         <div className="max-w-[1200px] mx-auto relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-8"
+          >
+            <img 
+              src="/logo.png" 
+              alt="IRUN Logo" 
+              className="h-20 w-auto mx-auto object-contain logo-white opacity-80"
+            />
+          </motion.div>
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}

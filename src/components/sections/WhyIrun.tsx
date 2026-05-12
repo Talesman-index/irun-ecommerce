@@ -27,8 +27,17 @@ const features = [
 
 export function WhyIrun() {
   return (
-    <section className="bg-white py-24 md:py-40 px-6 border-b border-regirl-border">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="bg-white py-24 md:py-40 px-6 border-b border-regirl-border relative overflow-hidden">
+      {/* Branded background watermark */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] aspect-square opacity-[0.03] -z-0 pointer-events-none">
+        <img 
+          src="/logo.png" 
+          alt="" 
+          className="w-full h-full object-contain grayscale"
+        />
+      </div>
+      
+      <div className="max-w-[1200px] mx-auto relative z-10">
         <header className="mb-24 text-center max-w-2xl mx-auto">
           <motion.span
             initial={{ opacity: 0, y: 16 }}

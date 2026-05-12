@@ -11,8 +11,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
           {/* Brand Column */}
           <div className="flex flex-col">
-            <Link href="/" className="font-serif text-3xl tracking-[0.1em] text-white uppercase mb-8">
-              irun<span className="text-regirl-burgundy">.</span>
+            <Link href="/" className="inline-block mb-8">
+              <img 
+                src="/logo.png" 
+                alt="irun logo" 
+                className="h-14 md:h-32 w-auto object-contain logo-white"
+              />
             </Link>
             <p className="font-sans font-light text-[15px] text-white/60 leading-relaxed mb-10 max-w-[240px]">
               Sublimer votre beauté naturelle avec l&apos;excellence du tissage premium. Un héritage de confiance et de style.
