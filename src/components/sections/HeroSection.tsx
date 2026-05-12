@@ -23,8 +23,10 @@ export function HeroSection({ imageUrl }: HeroSectionProps) {
         />
       </div>
       
-      {/* Overlay - subtle gradient for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-regirl-charcoal/60 via-transparent to-transparent" />
+      {/* Overlays - dual layer for depth and text readability */}
+      <div className="absolute inset-0 bg-regirl-charcoal/30 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-regirl-charcoal/80 via-regirl-charcoal/20 to-regirl-charcoal/40 z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-regirl-charcoal/80 via-transparent to-transparent z-[3]" />
 
       {/* Content */}
       <div className="absolute top-1/2 -translate-y-1/2 left-0 w-full px-6 md:left-[8%] md:px-0 z-10 max-w-4xl text-center md:text-left">
