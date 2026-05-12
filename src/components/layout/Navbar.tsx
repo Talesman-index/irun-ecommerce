@@ -39,7 +39,7 @@ export function Navbar() {
     <>
       <nav
         className={cn(
-          'fixed top-0 left-0 w-full z-[100] transition-all duration-300 px-6 md:px-12 py-6 md:py-8',
+          'fixed top-0 left-0 w-full z-[100] transition-all duration-300 px-6 md:px-12 py-4 md:py-8',
           showDarkNavbar ? 'bg-regirl-charcoal shadow-regirl-2 border-b border-white/5' : 'bg-transparent'
         )}
       >

@@ -48,7 +48,7 @@ export default function ProductDetailPage() {
       <Navbar />
       
       {/* Breadcrumb / Back button */}
-      <div className="pt-32 md:pt-48 pb-12 px-6 md:px-12 max-w-[1400px] mx-auto">
+      <div className="pt-40 md:pt-48 pb-12 px-6 md:px-12 max-w-[1400px] mx-auto">
         <button 
           onClick={() => router.back()}
           className="group flex items-center gap-3 font-ui text-[12px] uppercase tracking-[0.2em] text-regirl-charcoal hover:text-regirl-burgundy transition-all"
