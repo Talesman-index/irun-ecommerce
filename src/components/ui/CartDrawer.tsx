@@ -40,11 +40,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             {/* Header */}
             <div className="p-8 border-b border-regirl-border flex items-center justify-between bg-white">
               <div className="flex items-center gap-4">
-                <img 
-                  src="/logo.png" 
-                  alt="irun logo" 
-                  className="h-10 w-auto object-contain mr-2"
-                />
+                <ShoppingBag size={24} weight="light" className="text-regirl-burgundy" />
                 <h2 className="font-serif text-2xl text-regirl-charcoal">Votre Panier</h2>
                 <span className="font-ui text-[12px] bg-regirl-cream px-2 py-1 rounded text-regirl-burgundy font-bold">
                   {cartCount}

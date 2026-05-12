@@ -39,18 +39,14 @@ export function Navbar() {
     <>
       <nav
         className={cn(
-          'fixed top-0 left-0 w-full z-[100] transition-all duration-300 px-6 md:px-12 py-4 md:py-6',
+          'fixed top-0 left-0 w-full z-[100] transition-all duration-300 px-6 md:px-12 py-6 md:py-8',
           showDarkNavbar ? 'bg-regirl-charcoal shadow-regirl-2 border-b border-white/5' : 'bg-transparent'
         )}
       >
         <div className="max-w-[1400px] mx-auto flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="z-[110]">
-            <img 
-              src="/logo.png" 
-              alt="irun logo" 
-              className={cn("h-14 md:h-32 w-auto object-contain transition-all duration-300", showDarkNavbar && "logo-white")}
-            />
+          <Link href="/" className="font-serif text-2xl md:text-3xl tracking-[0.1em] text-white uppercase z-[110]">
+            irun<span className="text-regirl-burgundy">.</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -116,14 +112,7 @@ export function Navbar() {
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
               className="fixed top-0 right-0 h-full w-[85%] max-w-[400px] bg-regirl-charcoal z-[200] p-12 flex flex-col"
             >
-              <div className="flex justify-between items-center mb-20">
-                <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                  <img 
-                    src="/logo.png" 
-                    alt="irun logo" 
-                    className="h-40 w-auto object-contain logo-white"
-                  />
-                </Link>
+              <div className="flex justify-end mb-20">
                 <button onClick={() => setMobileMenuOpen(false)} className="text-white">
                   <X size={28} weight="light" />
                 </button>

@@ -98,18 +98,10 @@ Merci !`;
               <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" />
               Retour à la boutique
             </Link>
-            <div className="flex items-center gap-6 mb-8">
-              <img 
-                src="/logo.png" 
-                alt="IRUN Logo" 
-                className="h-16 w-auto object-contain"
-              />
-              <div className="h-10 w-[1px] bg-regirl-border" />
-              <h1 className="font-serif text-3xl md:text-4xl text-regirl-charcoal leading-tight">
-                Commande
-              </h1>
-            </div>
-            <div className="w-20 h-1 bg-regirl-burgundy mt-2 rounded-full" />
+            <h1 className="font-serif text-4xl md:text-5xl text-regirl-charcoal leading-tight">
+              Finaliser ma commande
+            </h1>
+            <div className="w-20 h-1 bg-regirl-burgundy mt-6 rounded-full" />
           </div>
           <div className="flex items-center gap-4 bg-white px-8 py-4 rounded-2xl shadow-sm border border-regirl-border">
             <div className="w-12 h-12 rounded-full bg-regirl-cream flex items-center justify-center text-regirl-burgundy">

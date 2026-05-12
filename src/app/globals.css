@@ -166,17 +166,3 @@ html {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
-
-/* Logo Utilities */
-.logo-invert {
-  filter: invert(1) brightness(1.2);
-}
-
-.logo-white {
-  filter: brightness(0) invert(1);
-}
-
-.logo-gold {
-  filter: sepia(1) saturate(5) hue-rotate(10deg);
-}
-

@@ -69,19 +69,6 @@ export default function AboutPage() {
               >
                 Spécialisés dans les mèches tissées de qualité premium, nous sélectionnons méticuleusement chaque fibre pour garantir une texture soyeuse, une densité parfaite et une longévité exceptionnelle.
               </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.6 }}
-                className="pt-10"
-              >
-                <img 
-                  src="/logo.png" 
-                  alt="irun logo signature" 
-                  className="h-20 w-auto object-contain opacity-40 grayscale hover:grayscale-0 transition-all duration-500"
-                />
-              </motion.div>
             </div>
           </div>
         </div>
