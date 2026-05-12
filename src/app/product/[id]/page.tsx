@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -48,14 +49,18 @@ export default function ProductDetailPage() {
       <Navbar />
       
       {/* Breadcrumb / Back button */}
-      <div className="pt-40 md:pt-48 pb-12 px-6 md:px-12 max-w-[1400px] mx-auto">
-        <button 
-          onClick={() => router.back()}
-          className="group flex items-center gap-3 font-ui text-[12px] uppercase tracking-[0.2em] text-regirl-charcoal hover:text-regirl-burgundy transition-all"
-        >
-          <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" />
-          Retour
-        </button>
+      <div className="pt-8 md:pt-12 pb-8 px-6 md:px-12 max-w-[1400px] mx-auto">
+        <nav className="flex items-center gap-3 font-ui text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-regirl-charcoal/40">
+          <Link href="/" className="hover:text-regirl-burgundy transition-colors">Boutique</Link>
+          <span className="opacity-20">/</span>
+          <button 
+            onClick={() => router.back()}
+            className="group flex items-center gap-2 text-regirl-charcoal hover:text-regirl-burgundy transition-all"
+          >
+            <ArrowLeft size={14} className="transition-transform group-hover:-translate-x-1" />
+            <span className="border-b border-transparent group-hover:border-regirl-burgundy pb-0.5">Retour</span>
+          </button>
+        </nav>
       </div>
 
       <section className="px-4 md:px-12 pb-24 max-w-[1400px] mx-auto">

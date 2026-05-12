@@ -87,99 +87,94 @@ Merci !`;
     <main className="min-h-screen bg-regirl-off-white">
       <Navbar />
       
-      <div className="pt-32 md:pt-48 pb-24 px-6 md:px-12 max-w-[1300px] mx-auto">
+      <div className="pt-8 md:pt-12 pb-24 px-6 md:px-12 max-w-[1200px] mx-auto">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
-          <div>
-            <Link 
-              href="/"
-              className="group flex items-center gap-3 font-ui text-[12px] uppercase tracking-[0.2em] text-regirl-charcoal hover:text-regirl-burgundy transition-all mb-6"
-            >
-              <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" />
-              Retour à la boutique
-            </Link>
-            <h1 className="font-serif text-4xl md:text-5xl text-regirl-charcoal leading-tight">
-              Finaliser ma commande
-            </h1>
-            <div className="w-20 h-1 bg-regirl-burgundy mt-6 rounded-full" />
-          </div>
-          <div className="flex items-center gap-4 bg-white px-8 py-4 rounded-2xl shadow-sm border border-regirl-border">
-            <div className="w-12 h-12 rounded-full bg-regirl-cream flex items-center justify-center text-regirl-burgundy">
-              <ShoppingBag size={24} weight="light" />
-            </div>
+        <div className="mb-10">
+          <nav className="flex items-center gap-3 font-ui text-[10px] uppercase tracking-[0.3em] text-regirl-charcoal/40 mb-6">
+            <Link href="/" className="hover:text-regirl-burgundy transition-colors">Boutique</Link>
+            <span className="opacity-20">/</span>
+            <span className="text-regirl-burgundy/60">Paiement</span>
+          </nav>
+          
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <div>
-              <p className="font-ui text-[10px] uppercase tracking-widest text-regirl-charcoal-muted font-bold">Panier actuel</p>
-              <p className="font-sans text-[15px] font-bold text-regirl-charcoal">{cartCount} articles</p>
+              <h1 className="font-serif text-3xl md:text-5xl text-regirl-charcoal leading-tight">
+                Finaliser ma commande
+              </h1>
+              <div className="w-12 h-0.5 bg-regirl-burgundy mt-4 rounded-full" />
+            </div>
+            
+            <div className="flex items-center gap-3 bg-white px-5 py-3 rounded-xl border border-regirl-border shadow-sm self-start">
+              <ShoppingBag size={18} className="text-regirl-burgundy" />
+              <span className="font-ui text-[11px] uppercase tracking-wider font-bold text-regirl-charcoal">
+                {cartCount} articles
+              </span>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Form */}
-          <div className="lg:col-span-7 space-y-12">
+          <div className="lg:col-span-7">
             <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="space-y-16"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="space-y-12"
             >
               {/* Section 1: Identity */}
-              <section className="space-y-10">
-                <div className="flex items-center gap-6">
-                  <span className="w-12 h-12 rounded-full border border-regirl-burgundy/30 flex items-center justify-center font-serif text-xl text-regirl-burgundy bg-white shadow-sm">
-                    01
+              <section className="bg-white p-8 md:p-10 rounded-[32px] border border-regirl-border shadow-sm">
+                <div className="flex items-center gap-4 mb-8">
+                  <span className="font-serif text-xl text-regirl-burgundy bg-regirl-cream w-10 h-10 rounded-full flex items-center justify-center">
+                    1
                   </span>
-                  <h2 className="font-serif text-3xl text-regirl-charcoal tracking-tight">Informations Personnelles</h2>
+                  <h2 className="font-serif text-2xl text-regirl-charcoal tracking-tight">Coordonnées</h2>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-4 border-l-2 border-regirl-cream">
-                  <div className="space-y-3">
-                    <label className="font-ui text-[12px] uppercase tracking-[0.2em] text-regirl-charcoal font-bold opacity-70">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                    <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-regirl-charcoal/60 font-bold">
                       Nom & Prénom *
                     </label>
-                    <div className="relative group">
-                      <input 
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Ex: Marie Kouassi"
-                        className="w-full bg-transparent border-b-2 border-regirl-border focus:border-regirl-burgundy transition-all py-4 px-0 font-sans text-lg outline-none placeholder:text-regirl-charcoal/20"
-                        required
-                      />
-                    </div>
+                    <input 
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Marie Kouassi"
+                      className="w-full bg-regirl-off-white/50 border-b border-regirl-border focus:border-regirl-burgundy transition-all py-3 px-0 font-sans text-base outline-none"
+                      required
+                    />
                   </div>
-                  <div className="space-y-3">
-                    <label className="font-ui text-[12px] uppercase tracking-[0.2em] text-regirl-charcoal font-bold opacity-70">
-                      Numéro WhatsApp *
+                  <div className="space-y-2">
+                    <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-regirl-charcoal/60 font-bold">
+                      WhatsApp *
                     </label>
-                    <div className="relative group">
-                      <input 
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="Ex: +229 01 00 00 00 00"
-                        className="w-full bg-transparent border-b-2 border-regirl-border focus:border-regirl-burgundy transition-all py-4 px-0 font-sans text-lg outline-none placeholder:text-regirl-charcoal/20"
-                        required
-                      />
-                    </div>
+                    <input 
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="+229 01 00 00 00"
+                      className="w-full bg-regirl-off-white/50 border-b border-regirl-border focus:border-regirl-burgundy transition-all py-3 px-0 font-sans text-base outline-none"
+                      required
+                    />
                   </div>
                 </div>
               </section>
 
               {/* Section 2: Shipping */}
-              <section className="space-y-10">
-                <div className="flex items-center gap-6">
-                  <span className="w-12 h-12 rounded-full border border-regirl-burgundy/30 flex items-center justify-center font-serif text-xl text-regirl-burgundy bg-white shadow-sm">
-                    02
+              <section className="bg-white p-8 md:p-10 rounded-[32px] border border-regirl-border shadow-sm">
+                <div className="flex items-center gap-4 mb-8">
+                  <span className="font-serif text-xl text-regirl-burgundy bg-regirl-cream w-10 h-10 rounded-full flex items-center justify-center">
+                    2
                   </span>
-                  <h2 className="font-serif text-3xl text-regirl-charcoal tracking-tight">Adresse de Livraison</h2>
+                  <h2 className="font-serif text-2xl text-regirl-charcoal tracking-tight">Livraison</h2>
                 </div>
                 
-                <div className="space-y-10 pl-4 border-l-2 border-regirl-cream">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div className="space-y-3">
-                      <label className="font-ui text-[12px] uppercase tracking-[0.2em] text-regirl-charcoal font-bold opacity-70">
+                <div className="space-y-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-regirl-charcoal/60 font-bold">
                         Ville *
                       </label>
                       <input 
@@ -187,36 +182,36 @@ Merci !`;
                         name="city"
                         value={formData.city}
                         onChange={handleInputChange}
-                        placeholder="Ex: Cotonou"
-                        className="w-full bg-transparent border-b-2 border-regirl-border focus:border-regirl-burgundy transition-all py-4 px-0 font-sans text-lg outline-none placeholder:text-regirl-charcoal/20"
+                        placeholder="Cotonou"
+                        className="w-full bg-regirl-off-white/50 border-b border-regirl-border focus:border-regirl-burgundy transition-all py-3 px-0 font-sans text-base outline-none"
                         required
                       />
                     </div>
-                    <div className="space-y-3">
-                      <label className="font-ui text-[12px] uppercase tracking-[0.2em] text-regirl-charcoal font-bold opacity-70">
-                        Quartier / Rue
+                    <div className="space-y-2">
+                      <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-regirl-charcoal/60 font-bold">
+                        Quartier
                       </label>
                       <input 
                         type="text"
                         name="address"
                         value={formData.address}
                         onChange={handleInputChange}
-                        placeholder="Ex: Fidjrossè, Rue 123"
-                        className="w-full bg-transparent border-b-2 border-regirl-border focus:border-regirl-burgundy transition-all py-4 px-0 font-sans text-lg outline-none placeholder:text-regirl-charcoal/20"
+                        placeholder="Fidjrossè"
+                        className="w-full bg-regirl-off-white/50 border-b border-regirl-border focus:border-regirl-burgundy transition-all py-3 px-0 font-sans text-base outline-none"
                       />
                     </div>
                   </div>
                   
-                  <div className="space-y-3">
-                    <label className="font-ui text-[12px] uppercase tracking-[0.2em] text-regirl-charcoal font-bold opacity-70">
-                      Note de commande (WhatsApp)
+                  <div className="space-y-2">
+                    <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-regirl-charcoal/60 font-bold">
+                      Message (Optionnel)
                     </label>
                     <textarea 
                       name="note"
                       value={formData.note}
                       onChange={handleInputChange}
-                      rows={6}
-                      className="w-full bg-white/50 border-2 border-regirl-border focus:border-regirl-burgundy transition-all p-6 rounded-2xl font-sans text-[15px] outline-none resize-none shadow-sm"
+                      rows={4}
+                      className="w-full bg-regirl-off-white/30 border border-regirl-border focus:border-regirl-burgundy transition-all p-4 rounded-xl font-sans text-sm outline-none resize-none"
                     />
                   </div>
                 </div>
@@ -280,12 +275,12 @@ Merci !`;
                 </div>
 
                 <div className="space-y-6">
-                  <button
+                  <button 
                     onClick={generateWhatsAppMessage}
-                    className="w-full py-6 rounded-2xl font-ui text-[14px] font-bold uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-4 shadow-xl mb-6 bg-regirl-burgundy text-white hover:bg-regirl-burgundy-deep hover:-translate-y-1 active:scale-95"
+                    className="w-full bg-regirl-burgundy text-white py-4 md:py-5 rounded-full font-ui text-[10px] md:text-[12px] uppercase tracking-widest font-bold hover:bg-regirl-burgundy/90 transition-all shadow-lg flex items-center justify-center gap-3 active:scale-95 group"
                   >
-                    Commander via WhatsApp
-                    <WhatsappLogo size={24} weight="fill" className="text-white" />
+                    <WhatsappLogo size={22} weight="fill" className="transition-transform group-hover:scale-110" />
+                    <span>Commander via WhatsApp</span>
                   </button>
                   
                   <div className="grid grid-cols-2 gap-4">

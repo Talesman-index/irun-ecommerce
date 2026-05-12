@@ -154,6 +154,9 @@ export function Navbar() {
           </>
         )}
       </AnimatePresence>
+
+      {/* Structural Spacer for secondary pages */}
+      {!isHome && <div className="h-[80px] md:h-[110px]" />}
     </>
   );
 }

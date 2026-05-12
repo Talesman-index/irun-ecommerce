@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow pt-32 pb-20 px-6">
+      <main className="flex-grow pt-8 md:pt-12 pb-20 px-6">
         <div className="max-w-[1280px] mx-auto">
           <header className="mb-20">
             <motion.span

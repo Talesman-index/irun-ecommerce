@@ -32,7 +32,7 @@ export default function CategoryPage() {
       <Navbar />
       
       {/* Header */}
-      <section className="bg-regirl-charcoal pt-40 pb-20 px-6">
+      <section className="bg-regirl-charcoal pt-16 md:pt-20 pb-20 px-6">
         <div className="max-w-[1200px] mx-auto text-center">
           <Reveal direction="down">
             <span className="font-ui text-[12px] tracking-[0.3em] text-regirl-burgundy uppercase block mb-4">
