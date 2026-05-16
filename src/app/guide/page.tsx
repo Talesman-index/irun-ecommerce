@@ -49,18 +49,18 @@ const guideSteps = [
 
 export default function GuidePage() {
   return (
-    <main className="min-h-screen bg-regirl-off-white">
+    <main className="min-h-screen bg-irun-off-white">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-48 pb-20 px-6 md:px-12 bg-regirl-charcoal text-white overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-regirl-burgundy/10 blur-[120px] rounded-full -mr-20 -mt-20" />
+      <section className="pt-48 pb-20 px-6 md:px-12 bg-irun-black text-white overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-irun-terracotta/10 blur-[120px] rounded-full -mr-20 -mt-20" />
         
         <div className="max-w-[1200px] mx-auto relative z-10 text-center">
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-ui text-[12px] uppercase tracking-[0.4em] text-regirl-burgundy mb-6 block"
+            className="font-ui text-[12px] uppercase tracking-[0.4em] text-irun-terracotta mb-6 block"
           >
             L'Art du Soin
           </motion.span>
@@ -71,7 +71,7 @@ export default function GuidePage() {
             className="font-serif text-5xl md:text-7xl mb-8 leading-tight"
           >
             Guide d'Entretien <br />
-            <span className="italic text-regirl-cream">IRUN Premium</span>
+            <span className="italic text-irun-nude">IRUN Premium</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -94,23 +94,23 @@ export default function GuidePage() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="flex flex-col md:flex-row gap-8 items-start bg-white p-10 md:p-12 rounded-[40px] shadow-regirl-1 border border-regirl-border group hover:border-regirl-burgundy/30 transition-all duration-500"
+                className="flex flex-col md:flex-row gap-8 items-start bg-white p-10 md:p-12 rounded-[40px] shadow-irun-1 border border-irun-border group hover:border-irun-terracotta/30 transition-all duration-500"
               >
-                <div className="w-20 h-20 rounded-3xl bg-regirl-cream flex items-center justify-center text-regirl-burgundy flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                <div className="w-20 h-20 rounded-3xl bg-irun-nude flex items-center justify-center text-irun-terracotta flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
                   {step.icon}
                 </div>
                 
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <span className="font-serif text-regirl-burgundy text-xl opacity-30">0{index + 1}</span>
-                    <h2 className="font-serif text-3xl text-regirl-charcoal">{step.title}</h2>
+                    <span className="font-serif text-irun-terracotta text-xl opacity-30">0{index + 1}</span>
+                    <h2 className="font-serif text-3xl text-irun-black">{step.title}</h2>
                   </div>
-                  <p className="font-sans text-regirl-charcoal/70 text-lg leading-relaxed">
+                  <p className="font-sans text-irun-black/70 text-lg leading-relaxed">
                     {step.description}
                   </p>
-                  <div className="bg-regirl-off-white p-6 rounded-2xl border-l-4 border-regirl-burgundy">
-                    <p className="font-ui text-[13px] text-regirl-charcoal italic flex items-center gap-3">
-                      <Sparkle size={18} className="text-regirl-burgundy" weight="fill" />
+                  <div className="bg-irun-off-white p-6 rounded-2xl border-l-4 border-irun-terracotta">
+                    <p className="font-ui text-[13px] text-irun-black italic flex items-center gap-3">
+                      <Sparkle size={18} className="text-irun-terracotta" weight="fill" />
                       {step.tip}
                     </p>
                   </div>
@@ -124,7 +124,7 @@ export default function GuidePage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-24 p-12 md:p-16 rounded-[50px] bg-regirl-burgundy text-white text-center overflow-hidden relative"
+            className="mt-24 p-12 md:p-16 rounded-[50px] bg-irun-terracotta text-white text-center overflow-hidden relative"
           >
             <div className="absolute inset-0 bg-[url('/assets/images/pattern.png')] opacity-10 mix-blend-overlay" />
             
@@ -140,7 +140,7 @@ export default function GuidePage() {
                   "Crème pour Boucles"
                 ].map((product, i) => (
                   <div key={i} className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/20">
-                    <CheckCircle size={24} className="mx-auto mb-4 text-regirl-cream" weight="fill" />
+                    <CheckCircle size={24} className="mx-auto mb-4 text-irun-nude" weight="fill" />
                     <span className="font-ui text-[14px] uppercase tracking-widest font-bold">{product}</span>
                   </div>
                 ))}

@@ -52,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${cormorant.variable} ${playfair.variable} ${inter.variable} ${spaceMono.variable} ${jost.variable} antialiased`}>
-      <body className="bg-white text-regirl-charcoal font-inter min-h-screen selection:bg-regirl-burgundy selection:text-white">
+      <body className="bg-white text-irun-black font-inter min-h-screen selection:bg-irun-terracotta selection:text-white">
         <ToastProvider>
           <CartProvider>
             {children}

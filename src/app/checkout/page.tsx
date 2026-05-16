@@ -84,29 +84,29 @@ Merci !`;
   const isFormValid = formData.name && formData.phone && formData.city && cart.length > 0;
 
   return (
-    <main className="min-h-screen bg-regirl-off-white">
+    <main className="min-h-screen bg-irun-off-white">
       <Navbar />
       
       <div className="pt-8 md:pt-12 pb-24 px-6 md:px-12 max-w-[1200px] mx-auto">
         {/* Header */}
         <div className="mb-10">
-          <nav className="flex items-center gap-3 font-ui text-[10px] uppercase tracking-[0.3em] text-regirl-charcoal/40 mb-6">
-            <Link href="/" className="hover:text-regirl-burgundy transition-colors">Boutique</Link>
+          <nav className="flex items-center gap-3 font-ui text-[10px] uppercase tracking-[0.3em] text-irun-black/40 mb-6">
+            <Link href="/" className="hover:text-irun-terracotta transition-colors">Boutique</Link>
             <span className="opacity-20">/</span>
-            <span className="text-regirl-burgundy/60">Paiement</span>
+            <span className="text-irun-terracotta/60">Paiement</span>
           </nav>
           
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <div>
-              <h1 className="font-serif text-3xl md:text-5xl text-regirl-charcoal leading-tight">
+              <h1 className="font-serif text-3xl md:text-5xl text-irun-black leading-tight">
                 Finaliser ma commande
               </h1>
-              <div className="w-12 h-0.5 bg-regirl-burgundy mt-4 rounded-full" />
+              <div className="w-12 h-0.5 bg-irun-terracotta mt-4 rounded-full" />
             </div>
             
-            <div className="flex items-center gap-3 bg-white px-5 py-3 rounded-xl border border-regirl-border shadow-sm self-start">
-              <ShoppingBag size={18} className="text-regirl-burgundy" />
-              <span className="font-ui text-[11px] uppercase tracking-wider font-bold text-regirl-charcoal">
+            <div className="flex items-center gap-3 bg-white px-5 py-3 rounded-xl border border-irun-border shadow-sm self-start">
+              <ShoppingBag size={18} className="text-irun-terracotta" />
+              <span className="font-ui text-[11px] uppercase tracking-wider font-bold text-irun-black">
                 {cartCount} articles
               </span>
             </div>
@@ -122,17 +122,17 @@ Merci !`;
               className="space-y-12"
             >
               {/* Section 1: Identity */}
-              <section className="bg-white p-8 md:p-10 rounded-[32px] border border-regirl-border shadow-sm">
+              <section className="bg-white p-8 md:p-10 rounded-[32px] border border-irun-border shadow-sm">
                 <div className="flex items-center gap-4 mb-8">
-                  <span className="font-serif text-xl text-regirl-burgundy bg-regirl-cream w-10 h-10 rounded-full flex items-center justify-center">
+                  <span className="font-serif text-xl text-irun-terracotta bg-irun-nude w-10 h-10 rounded-full flex items-center justify-center">
                     1
                   </span>
-                  <h2 className="font-serif text-2xl text-regirl-charcoal tracking-tight">Coordonnées</h2>
+                  <h2 className="font-serif text-2xl text-irun-black tracking-tight">Coordonnées</h2>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-2">
-                    <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-regirl-charcoal/60 font-bold">
+                    <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-irun-black/60 font-bold">
                       Nom & Prénom *
                     </label>
                     <input 
@@ -141,12 +141,12 @@ Merci !`;
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="Marie Kouassi"
-                      className="w-full bg-regirl-off-white/50 border-b border-regirl-border focus:border-regirl-burgundy transition-all py-3 px-0 font-sans text-base outline-none"
+                      className="w-full bg-irun-off-white/50 border-b border-irun-border focus:border-irun-terracotta transition-all py-3 px-0 font-sans text-base outline-none"
                       required
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-regirl-charcoal/60 font-bold">
+                    <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-irun-black/60 font-bold">
                       WhatsApp *
                     </label>
                     <input 
@@ -155,7 +155,7 @@ Merci !`;
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="+229 01 00 00 00"
-                      className="w-full bg-regirl-off-white/50 border-b border-regirl-border focus:border-regirl-burgundy transition-all py-3 px-0 font-sans text-base outline-none"
+                      className="w-full bg-irun-off-white/50 border-b border-irun-border focus:border-irun-terracotta transition-all py-3 px-0 font-sans text-base outline-none"
                       required
                     />
                   </div>
@@ -163,18 +163,18 @@ Merci !`;
               </section>
 
               {/* Section 2: Shipping */}
-              <section className="bg-white p-8 md:p-10 rounded-[32px] border border-regirl-border shadow-sm">
+              <section className="bg-white p-8 md:p-10 rounded-[32px] border border-irun-border shadow-sm">
                 <div className="flex items-center gap-4 mb-8">
-                  <span className="font-serif text-xl text-regirl-burgundy bg-regirl-cream w-10 h-10 rounded-full flex items-center justify-center">
+                  <span className="font-serif text-xl text-irun-terracotta bg-irun-nude w-10 h-10 rounded-full flex items-center justify-center">
                     2
                   </span>
-                  <h2 className="font-serif text-2xl text-regirl-charcoal tracking-tight">Livraison</h2>
+                  <h2 className="font-serif text-2xl text-irun-black tracking-tight">Livraison</h2>
                 </div>
                 
                 <div className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-2">
-                      <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-regirl-charcoal/60 font-bold">
+                      <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-irun-black/60 font-bold">
                         Ville *
                       </label>
                       <input 
@@ -183,12 +183,12 @@ Merci !`;
                         value={formData.city}
                         onChange={handleInputChange}
                         placeholder="Cotonou"
-                        className="w-full bg-regirl-off-white/50 border-b border-regirl-border focus:border-regirl-burgundy transition-all py-3 px-0 font-sans text-base outline-none"
+                        className="w-full bg-irun-off-white/50 border-b border-irun-border focus:border-irun-terracotta transition-all py-3 px-0 font-sans text-base outline-none"
                         required
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-regirl-charcoal/60 font-bold">
+                      <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-irun-black/60 font-bold">
                         Quartier
                       </label>
                       <input 
@@ -197,13 +197,13 @@ Merci !`;
                         value={formData.address}
                         onChange={handleInputChange}
                         placeholder="Fidjrossè"
-                        className="w-full bg-regirl-off-white/50 border-b border-regirl-border focus:border-regirl-burgundy transition-all py-3 px-0 font-sans text-base outline-none"
+                        className="w-full bg-irun-off-white/50 border-b border-irun-border focus:border-irun-terracotta transition-all py-3 px-0 font-sans text-base outline-none"
                       />
                     </div>
                   </div>
                   
                   <div className="space-y-2">
-                    <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-regirl-charcoal/60 font-bold">
+                    <label className="font-ui text-[10px] uppercase tracking-[0.2em] text-irun-black/60 font-bold">
                       Message (Optionnel)
                     </label>
                     <textarea 
@@ -211,7 +211,7 @@ Merci !`;
                       value={formData.note}
                       onChange={handleInputChange}
                       rows={4}
-                      className="w-full bg-regirl-off-white/30 border border-regirl-border focus:border-regirl-burgundy transition-all p-4 rounded-xl font-sans text-sm outline-none resize-none"
+                      className="w-full bg-irun-off-white/30 border border-irun-border focus:border-irun-terracotta transition-all p-4 rounded-xl font-sans text-sm outline-none resize-none"
                     />
                   </div>
                 </div>
@@ -224,10 +224,10 @@ Merci !`;
             <motion.div 
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="bg-regirl-charcoal text-white p-10 md:p-12 rounded-[40px] shadow-regirl-3 relative overflow-hidden"
+              className="bg-irun-black text-white p-10 md:p-12 rounded-[40px] shadow-irun-3 relative overflow-hidden"
             >
               {/* Subtle background decoration */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-regirl-burgundy/10 blur-[100px] -mr-32 -mt-32 rounded-full" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-irun-terracotta/10 blur-[100px] -mr-32 -mt-32 rounded-full" />
               
               <div className="relative z-10">
                 <h3 className="font-serif text-3xl mb-10 flex items-center justify-between">
@@ -251,7 +251,7 @@ Merci !`;
                           </div>
                         </div>
                       </div>
-                      <p className="font-serif text-[16px] text-regirl-cream">{formatPrice(item.price * item.quantity)}</p>
+                      <p className="font-serif text-[16px] text-irun-nude">{formatPrice(item.price * item.quantity)}</p>
                     </div>
                   ))}
                 </div>
@@ -263,12 +263,12 @@ Merci !`;
                   </div>
                   <div className="flex justify-between items-center text-white/50">
                     <span className="font-ui text-[12px] uppercase tracking-[0.2em]">Livraison</span>
-                    <span className="font-ui text-[11px] uppercase font-bold text-regirl-burgundy bg-regirl-burgundy/10 px-3 py-1 rounded-md">Paiement à réception</span>
+                    <span className="font-ui text-[11px] uppercase font-bold text-irun-terracotta bg-irun-terracotta/10 px-3 py-1 rounded-md">Paiement à réception</span>
                   </div>
                   <div className="flex justify-between items-center pt-8">
                     <span className="font-serif text-2xl">Total</span>
                     <div className="text-right">
-                      <span className="block font-serif text-4xl text-regirl-cream leading-none">{formatPrice(cartTotal)}</span>
+                      <span className="block font-serif text-4xl text-irun-nude leading-none">{formatPrice(cartTotal)}</span>
                       <span className="font-ui text-[9px] uppercase tracking-widest text-white/30 mt-2 block">TVA incluse</span>
                     </div>
                   </div>
@@ -277,7 +277,7 @@ Merci !`;
                 <div className="space-y-6">
                   <button 
                     onClick={generateWhatsAppMessage}
-                    className="w-full bg-regirl-burgundy text-white py-4 md:py-5 rounded-full font-ui text-[10px] md:text-[12px] uppercase tracking-widest font-bold hover:bg-regirl-burgundy/90 transition-all shadow-lg flex items-center justify-center gap-3 active:scale-95 group"
+                    className="w-full bg-irun-terracotta text-white py-4 md:py-5 rounded-full font-ui text-[10px] md:text-[12px] uppercase tracking-widest font-bold hover:bg-irun-terracotta/90 transition-all shadow-lg flex items-center justify-center gap-3 active:scale-95 group"
                   >
                     <WhatsappLogo size={22} weight="fill" className="transition-transform group-hover:scale-110" />
                     <span>Commander via WhatsApp</span>
@@ -285,11 +285,11 @@ Merci !`;
                   
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-white/5 p-4 rounded-2xl flex flex-col items-center gap-2 text-center border border-white/5">
-                      <CheckCircle size={20} className="text-regirl-burgundy" />
+                      <CheckCircle size={20} className="text-irun-terracotta" />
                       <span className="text-[10px] uppercase tracking-widest text-white/60">Paiement Sécurisé</span>
                     </div>
                     <div className="bg-white/5 p-4 rounded-2xl flex flex-col items-center gap-2 text-center border border-white/5">
-                      <CheckCircle size={20} className="text-regirl-burgundy" />
+                      <CheckCircle size={20} className="text-irun-terracotta" />
                       <span className="text-[10px] uppercase tracking-widest text-white/60">Livraison Express</span>
                     </div>
                   </div>

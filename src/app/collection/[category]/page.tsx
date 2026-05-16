@@ -32,10 +32,10 @@ export default function CategoryPage() {
       <Navbar />
       
       {/* Header */}
-      <section className="bg-regirl-charcoal pt-16 md:pt-20 pb-20 px-6">
+      <section className="bg-irun-black pt-16 md:pt-20 pb-20 px-6">
         <div className="max-w-[1200px] mx-auto text-center">
           <Reveal direction="down">
-            <span className="font-ui text-[12px] tracking-[0.3em] text-regirl-burgundy uppercase block mb-4">
+            <span className="font-ui text-[12px] tracking-[0.3em] text-irun-terracotta uppercase block mb-4">
               Collection
             </span>
             <h1 className="font-serif text-[42px] md:text-[64px] text-white uppercase tracking-wider">
@@ -72,7 +72,7 @@ export default function CategoryPage() {
             </div>
           ) : (
             <div className="text-center py-40">
-              <p className="font-serif text-2xl text-regirl-charcoal-muted">
+              <p className="font-serif text-2xl text-irun-black-muted">
                 Aucun produit trouvé dans la collection {displayName}.
               </p>
             </div>

@@ -40,13 +40,13 @@ export function Navbar() {
       <nav
         className={cn(
           'fixed top-0 left-0 w-full z-[100] transition-all duration-300 px-6 md:px-12 py-4 md:py-8',
-          showDarkNavbar ? 'bg-regirl-charcoal shadow-regirl-2 border-b border-white/5' : 'bg-transparent'
+          showDarkNavbar ? 'bg-irun-black shadow-irun-2 border-b border-white/5' : 'bg-transparent'
         )}
       >
         <div className="max-w-[1400px] mx-auto flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="font-serif text-2xl md:text-3xl tracking-[0.1em] text-white uppercase z-[110]">
-            irun<span className="text-regirl-burgundy">.</span>
+            irun<span className="text-irun-terracotta">.</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -55,10 +55,10 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="font-sans text-[13px] font-light uppercase tracking-widest text-white/80 hover:text-regirl-cream transition-colors relative group"
+                className="font-sans text-[13px] font-light uppercase tracking-widest text-white/80 hover:text-irun-nude transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-regirl-burgundy transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-irun-terracotta transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
@@ -77,13 +77,13 @@ export function Navbar() {
             >
               <ShoppingBag size={38} weight="light" className="md:w-[32px]" />
               {cartCount > 0 && (
-                <span className="absolute -top-2 -right-2 w-5 h-5 bg-regirl-burgundy rounded-full flex items-center justify-center text-white font-ui text-[10px] font-bold shadow-lg">
+                <span className="absolute -top-2 -right-2 w-5 h-5 bg-irun-terracotta rounded-full flex items-center justify-center text-white font-ui text-[10px] font-bold shadow-lg">
                   {cartCount}
                 </span>
               )}
             </button>
             <button 
-              className="lg:hidden flex items-center justify-center w-14 h-14 text-white hover:text-regirl-burgundy transition-all active:scale-90"
+              className="lg:hidden flex items-center justify-center w-14 h-14 text-white hover:text-irun-terracotta transition-all active:scale-90"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X size={44} weight="light" /> : <List size={44} weight="light" />}
@@ -110,7 +110,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[85%] max-w-[400px] bg-regirl-charcoal z-[200] p-12 flex flex-col"
+              className="fixed top-0 right-0 h-full w-[85%] max-w-[400px] bg-irun-black z-[200] p-12 flex flex-col"
             >
               <div className="flex justify-end mb-20">
                 <button onClick={() => setMobileMenuOpen(false)} className="text-white">
@@ -129,7 +129,7 @@ export function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="font-serif text-5xl text-white hover:text-regirl-burgundy transition-colors block border-b border-white/5 pb-6"
+                      className="font-serif text-5xl text-white hover:text-irun-terracotta transition-colors block border-b border-white/5 pb-6"
                     >
                       {link.name}
                     </Link>
@@ -146,7 +146,7 @@ export function Navbar() {
                     <TiktokLogo size={24} weight="light" />
                   </Link>
                 </div>
-                <button className="btn-regirl-primary w-full">
+                <button className="btn-irun-primary w-full">
                   Boutique
                 </button>
               </div>

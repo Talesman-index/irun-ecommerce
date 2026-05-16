@@ -17,7 +17,7 @@ export function Bestsellers() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-ui text-[12px] tracking-[0.3em] text-regirl-burgundy uppercase block mb-6"
+            className="font-ui text-[12px] tracking-[0.3em] text-irun-terracotta uppercase block mb-6"
           >
             Sélection Exclusive
           </motion.span>
@@ -26,9 +26,9 @@ export function Bestsellers() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-serif text-[42px] md:text-[52px] text-regirl-charcoal leading-[1.1]"
+            className="font-serif text-[42px] md:text-[52px] text-irun-black leading-[1.1]"
           >
-            Nos <span className="italic font-accent text-regirl-burgundy">Incontournables</span>
+            Nos <span className="italic font-accent text-irun-terracotta">Incontournables</span>
           </motion.h2>
         </header>
 
@@ -56,7 +56,7 @@ export function Bestsellers() {
         </div>
 
         <footer className="mt-24 text-center">
-          <Link href="/collection" className="btn-regirl-outline group inline-flex items-center gap-4">
+          <Link href="/collection" className="btn-irun-outline group inline-flex items-center gap-4">
             Voir toute la collection
             <ArrowRight size={18} weight="light" className="transition-transform group-hover:translate-x-1" />
           </Link>

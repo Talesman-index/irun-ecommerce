@@ -6,22 +6,22 @@ import { InstagramLogo, TiktokLogo, ArrowRight } from '@phosphor-icons/react';
 
 export function Footer() {
   return (
-    <footer className="bg-regirl-charcoal pt-24 pb-12 px-6 overflow-hidden">
+    <footer className="bg-irun-black pt-24 pb-12 px-6 overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
           {/* Brand Column */}
           <div className="flex flex-col">
             <Link href="/" className="font-serif text-3xl tracking-[0.1em] text-white uppercase mb-8">
-              irun<span className="text-regirl-burgundy">.</span>
+              irun<span className="text-irun-terracotta">.</span>
             </Link>
             <p className="font-sans font-light text-[15px] text-white/60 leading-relaxed mb-10 max-w-[240px]">
               Sublimer votre beauté naturelle avec l&apos;excellence du tissage premium. Un héritage de confiance et de style.
             </p>
             <div className="flex items-center gap-6">
-              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-regirl-burgundy transition-all duration-300">
+              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-irun-terracotta transition-all duration-300">
                 <InstagramLogo size={20} weight="light" />
               </Link>
-              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-regirl-burgundy transition-all duration-300">
+              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-irun-terracotta transition-all duration-300">
                 <TiktokLogo size={20} weight="light" />
               </Link>
             </div>
@@ -34,7 +34,7 @@ export function Footer() {
             </h4>
             <div className="flex flex-col gap-4">
               {['Brésilienne', 'Péruvienne', 'Malaisienne', 'Bundled Deals', 'Nouveautés'].map((item) => (
-                <Link key={item} href="#" className="font-sans font-light text-[14px] text-white/60 hover:text-regirl-cream transition-colors w-fit">
+                <Link key={item} href="#" className="font-sans font-light text-[14px] text-white/60 hover:text-irun-nude transition-colors w-fit">
                   {item}
                 </Link>
               ))}
@@ -47,11 +47,11 @@ export function Footer() {
               Aide & Support
             </h4>
               <div className="flex flex-col gap-4">
-                <Link href="/guide" className="font-sans font-light text-[14px] text-white/60 hover:text-regirl-cream transition-colors w-fit">
+                <Link href="/guide" className="font-sans font-light text-[14px] text-white/60 hover:text-irun-nude transition-colors w-fit">
                   Guide d&apos;entretien
                 </Link>
                 {['FAQ', 'Livraison', 'Retours', 'Contact'].map((item) => (
-                  <Link key={item} href="#" className="font-sans font-light text-[14px] text-white/60 hover:text-regirl-cream transition-colors w-fit">
+                  <Link key={item} href="#" className="font-sans font-light text-[14px] text-white/60 hover:text-irun-nude transition-colors w-fit">
                     {item}
                   </Link>
                 ))}
@@ -70,9 +70,9 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Votre email"
-                className="input-regirl-pill !bg-white/5 !border-white/10 !text-white focus:!bg-white focus:!text-regirl-charcoal"
+                className="input-irun-pill !bg-white/5 !border-white/10 !text-white focus:!bg-white focus:!text-irun-black"
               />
-              <button className="absolute right-2 top-1.5 w-10 h-10 bg-regirl-burgundy text-white rounded-full flex items-center justify-center hover:bg-regirl-burgundy-deep transition-colors shadow-lg">
+              <button className="absolute right-2 top-1.5 w-10 h-10 bg-irun-terracotta text-white rounded-full flex items-center justify-center hover:bg-irun-terracotta-deep transition-colors shadow-lg">
                 <ArrowRight size={18} weight="bold" />
               </button>
             </div>

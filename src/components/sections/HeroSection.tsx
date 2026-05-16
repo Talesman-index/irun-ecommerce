@@ -24,9 +24,9 @@ export function HeroSection({ imageUrl }: HeroSectionProps) {
       </div>
       
       {/* Overlays - dual layer for depth and text readability */}
-      <div className="absolute inset-0 bg-regirl-charcoal/30 z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-regirl-charcoal/80 via-regirl-charcoal/20 to-regirl-charcoal/40 z-[2]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-regirl-charcoal/80 via-transparent to-transparent z-[3]" />
+      <div className="absolute inset-0 bg-irun-black/30 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-irun-black/80 via-irun-black/20 to-irun-black/40 z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-irun-black/80 via-transparent to-transparent z-[3]" />
 
       {/* Content */}
       <div className="absolute top-1/2 -translate-y-1/2 left-0 w-full px-6 md:left-[8%] md:px-0 z-10 max-w-4xl text-center md:text-left">
@@ -73,7 +73,7 @@ export function HeroSection({ imageUrl }: HeroSectionProps) {
           transition={{ delay: 1.1, duration: 0.8 }}
           className="flex justify-center md:justify-start"
         >
-          <button className="btn-regirl-primary flex items-center gap-4 group h-12 md:h-14 px-10">
+          <button className="btn-irun-primary flex items-center gap-4 group h-12 md:h-14 px-10">
             Découvrir la collection
             <ArrowRight size={20} weight="light" className="transition-transform group-hover:translate-x-1" />
           </button>
@@ -85,7 +85,7 @@ export function HeroSection({ imageUrl }: HeroSectionProps) {
         <motion.div
           animate={{ height: [40, 0, 40] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-[1px] bg-regirl-burgundy origin-bottom"
+          className="w-[1px] bg-irun-terracotta origin-bottom"
         />
         <span>Scroll</span>
       </div>

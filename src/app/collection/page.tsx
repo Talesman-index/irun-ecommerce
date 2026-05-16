@@ -22,14 +22,14 @@ export default function CollectionPage() {
       <Navbar />
       
       {/* Header */}
-      <section className="bg-regirl-charcoal pt-32 pb-20 px-6">
+      <section className="bg-irun-black pt-32 pb-20 px-6">
         <div className="max-w-[1200px] mx-auto text-center">
           <Reveal direction="down">
-            <span className="font-ui text-[12px] tracking-[0.3em] text-regirl-burgundy uppercase block mb-4">
+            <span className="font-ui text-[12px] tracking-[0.3em] text-irun-terracotta uppercase block mb-4">
               Boutique
             </span>
             <h1 className="font-serif text-[42px] md:text-[64px] text-white uppercase tracking-wider mb-8">
-              La Collection <span className="italic font-accent text-regirl-burgundy">IRUN</span>
+              La Collection <span className="italic font-accent text-irun-terracotta">IRUN</span>
             </h1>
           </Reveal>
 
@@ -41,7 +41,7 @@ export default function CollectionPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`font-ui text-[13px] uppercase tracking-widest px-6 py-2 transition-all border-b-2 ${
                   activeCategory === cat 
-                    ? 'border-regirl-burgundy text-white' 
+                    ? 'border-irun-terracotta text-white' 
                     : 'border-transparent text-white/40 hover:text-white'
                 }`}
               >
@@ -79,7 +79,7 @@ export default function CollectionPage() {
             </div>
           ) : (
             <div className="text-center py-40">
-              <p className="font-serif text-2xl text-regirl-charcoal-muted">
+              <p className="font-serif text-2xl text-irun-black-muted">
                 Aucun produit trouvé dans cette catégorie.
               </p>
             </div>

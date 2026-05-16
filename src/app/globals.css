@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors - Regirl Inspired */
-  --color-regirl-burgundy: #8E2210;
-  --color-regirl-burgundy-deep: #902414;
-  --color-regirl-charcoal: #393640;
-  --color-regirl-charcoal-muted: #66635E;
-  --color-regirl-cream: #FFF3DE;
-  --color-regirl-cream-pale: #FEF7E0;
-  --color-regirl-off-black: #000000;
-  --color-regirl-off-white: #FDFDFC;
-  --color-regirl-ivory: #FFFCF3;
-  --color-regirl-teal: #243E3A;
+  /* Colors - ÌRÙN Palette */
+  --color-irun-terracotta: #802F1F;
+  --color-irun-terracotta-deep: #602216;
+  --color-irun-black: #000000;
+  --color-irun-black-muted: #66635E;
+  --color-irun-nude: #FFF3DE;
+  --color-irun-gold: #D6B47A;
+  --color-irun-ivory: #FFFCF3;
+  --color-irun-off-black: #000000;
+  --color-irun-off-white: #FDFDFC;
+  --color-irun-teal: #243E3A;
   
-  --color-regirl-border: #E5E7EB;
-  --color-regirl-error: #FF0000;
-  --color-regirl-success: #FF9AA1;
+  --color-irun-border: #E5E7EB;
+  --color-irun-error: #FF0000;
+  --color-irun-success: var(--color-irun-gold);
 
   /* Fonts */
   --font-serif: var(--font-playfair), Georgia, serif;
@@ -24,7 +24,7 @@
   --font-mono: var(--font-space-mono), monospace;
   --font-accent: var(--font-cormorant), serif;
 
-  /* Spacing Scale - Regirl */
+  /* Spacing Scale - ÌRÙN */
   --spacing-4: 4px;
   --spacing-8: 8px;
   --spacing-12: 12px;
@@ -39,9 +39,9 @@
   --spacing-80: 80px;
 
   /* Elevation */
-  --shadow-regirl-1: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
-  --shadow-regirl-2: 0px 1px 4px 0px rgba(0, 0, 0, 0.12);
-  --shadow-regirl-3: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+  --shadow-irun-1: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
+  --shadow-irun-2: 0px 1px 4px 0px rgba(0, 0, 0, 0.12);
+  --shadow-irun-3: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
 }
 
 html {
@@ -51,7 +51,7 @@ html {
 @layer base {
   body {
     background-color: white;
-    color: #393640;
+    color: var(--color-irun-black);
     font-family: var(--font-inter), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -60,14 +60,14 @@ html {
 
 @layer components {
   /* Buttons */
-  .btn-regirl-primary {
+  .btn-irun-primary {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 2rem;
     padding-right: 2rem;
     height: 2.5rem;
-    background-color: #8E2210;
+    background-color: var(--color-irun-terracotta);
     color: white;
     font-family: var(--font-jost), sans-serif;
     font-weight: 600;
@@ -78,15 +78,15 @@ html {
     border-radius: 0;
     cursor: pointer;
   }
-  .btn-regirl-primary:hover {
-    background-color: #902414;
+  .btn-irun-primary:hover {
+    background-color: var(--color-irun-terracotta-deep);
   }
   
-  .btn-regirl-ghost {
+  .btn-irun-ghost {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: #393640;
+    color: var(--color-irun-black);
     font-family: var(--font-jost), sans-serif;
     font-weight: 600;
     font-size: 14px;
@@ -95,19 +95,19 @@ html {
     transition: opacity 0.3s ease;
     cursor: pointer;
   }
-  .btn-regirl-ghost:hover {
+  .btn-irun-ghost:hover {
     opacity: 0.8;
   }
 
-  .btn-regirl-outline {
+  .btn-irun-outline {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 2rem;
     padding-right: 2rem;
     height: 2.5rem;
-    border: 1px solid #8E2210;
-    color: #8E2210;
+    border: 1px solid var(--color-irun-terracotta);
+    color: var(--color-irun-terracotta);
     font-family: var(--font-jost), sans-serif;
     font-weight: 600;
     font-size: 14px;
@@ -117,16 +117,16 @@ html {
     border-radius: 0;
     cursor: pointer;
   }
-  .btn-regirl-outline:hover {
-    background-color: #8E2210;
+  .btn-irun-outline:hover {
+    background-color: var(--color-irun-terracotta);
     color: white;
   }
 
-  .input-regirl-pill {
+  .input-irun-pill {
     width: 100%;
     background-color: white;
     border: 1px solid #E5E7EB;
-    color: #393640;
+    color: var(--color-irun-black);
     font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 14px;
     padding-left: 1.5rem;
@@ -136,9 +136,9 @@ html {
     outline: none;
     transition: all 0.2s ease;
   }
-  .input-regirl-pill:focus {
-    border-color: #8E2210;
-    box-shadow: 0 0 0 4px rgba(142, 34, 16, 0.05);
+  .input-irun-pill:focus {
+    border-color: var(--color-irun-terracotta);
+    box-shadow: 0 0 0 4px rgba(128, 47, 31, 0.05);
   }
 }
 
@@ -165,4 +165,37 @@ html {
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+/* Vintage & Pinterest Aesthetic */
+.vintage-grain {
+  position: relative;
+}
+
+.vintage-grain::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background-image: url("https://raw.githubusercontent.com/thoughtbot/design-system/main/app/assets/images/noise.png");
+  background-repeat: repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 5;
+  animation: grain 8s steps(10) infinite;
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
 }

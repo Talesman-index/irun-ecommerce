@@ -36,7 +36,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
             initial={{ opacity: 0, y: 50, x: '-50%' }}
             animate={{ opacity: 1, y: 0, x: '-50%' }}
             exit={{ opacity: 0, y: 20, x: '-50%' }}
-            className="fixed bottom-10 left-1/2 z-[2000] bg-regirl-charcoal text-white px-6 py-4 rounded-full shadow-regirl-3 flex items-center gap-4 min-w-[300px] border border-white/10 backdrop-blur-md"
+            className="fixed bottom-10 left-1/2 z-[2000] bg-irun-black text-white px-6 py-4 rounded-full shadow-irun-3 flex items-center gap-4 min-w-[300px] border border-white/10 backdrop-blur-md"
           >
             <CheckCircle size={24} weight="fill" className="text-green-400" />
             <span className="font-ui text-[13px] uppercase tracking-wider font-medium flex-grow">
